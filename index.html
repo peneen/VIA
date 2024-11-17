@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIA - Transporte de Mudanças</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1><a href="https://www.seusite.com" target="_blank">VIA</a></h1>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#services">Serviços</a>
+      <a href="#drivers">Cadastro de Motoristas</a>
+      <a href="#request">Chamar um Caminhão</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Abas -->
+    <div class="tabs">
+      <button class="tablink" onclick="openTab(event, 'home')">Início</button>
+      <button class="tablink" onclick="openTab(event, 'services')">Serviços</button>
+      <button class="tablink" onclick="openTab(event, 'drivers')">Cadastro de Motoristas</button>
+      <button class="tablink" onclick="openTab(event, 'request')">Chamar um Caminhão</button>
+    </div>
+
+    <!-- Conteúdo das Abas -->
+    <div id="home" class="tabcontent">
+      <h2>Bem-vindo ao VIA</h2>
+      <p><strong>VIA</strong> é uma empresa especializada em oferecer serviços rápidos e confiáveis de transporte de carga...</p>
+    </div>
+
+    <div id="services" class="tabcontent">
+      <h2>Nossos Serviços</h2>
+      <ul>
+        <li>Transporte de móveis</li>
+        <li>Serviço rápido e confiável</li>
+        <li>Agendamento fácil</li>
+      </ul>
+    </div>
+
+    <div id="drivers" class="tabcontent">
+      <h2>Cadastro de Motoristas</h2>
+      <form id="driverForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="vehicle">Tipo de Veículo:</label>
+        <select id="vehicle" name="vehicle">
+          <option value="caminhão pequeno">Caminhão Pequeno</option>
+          <option value="caminhão médio">Caminhão Médio</option>
+          <option value="caminhão grande">Caminhão Grande</option>
+        </select>
+        
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+
+    <div id="request" class="tabcontent">
+      <h2>Chamar um Caminhão</h2>
+      <form id="requestForm">
+        <label for="pickup">Local de Coleta:</label>
+        <input type="text" id="pickup" name="pickup" required>
+        
+        <label for="destination">Destino:</label>
+        <input type="text" id="destination" name="destination" required>
+        
+        <label for="size">Tamanho do Caminhão:</label>
+        <select id="size" name="size">
+          <option value="pequeno">Pequeno</option>
+          <option value="médio">Médio</option>
+          <option value="grande">Grande</option>
+        </select>
+        
+        <button type="submit">Solicitar</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 VIA - Transporte de Mudanças. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
